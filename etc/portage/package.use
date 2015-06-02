@@ -1,0 +1,367 @@
+net-libs/libgadu threads -ssl
+app-misc/mc 7zip
+x11-libs/libX11 xcb
+x11-libs/cairo glitz svg xcb directfb newspr pdf lcdfilter
+dev-java/commons-lang source
+x11-base/xorg-server hal nptl xnest
+sys-libs/glibc userlocales
+dev-vcs/subversion -java vim-syntax
+media-video/mplayer -live ass srt xvid -real quicktime a52 X aac alib dv theora -xvmc xv x264 rtc 3dnow 3dnowext -directfb mmxext -gif -xscreensaver v4l2 dirac -dts pvr win32codecs twolame -rar -speex -png -jpeg libmpeg2 v4l dvdnav dvd cdio
+media-video/mplayer2 -live ass srt xvid -real quicktime a52 X aac dvdnav alib dv theora -xvmc xv x264 rtc 3dnow 3dnowext -directfb mmxext -gif v4l2 dirac -dts pvr win32codecs twolame -rar -speex -png -jpeg libmpeg2
+media-gfx/gfxboot -themes animate
+x11-libs/libxcb sloppy-lock
+media-video/ffmpeg xvid aac imlib theora a52 network threads dirac schroedinger cpudetection 3dnow 3dnowext
+sys-apps/hal -disk-partition -crypt dell
+media-libs/win32codecs quicktime real
+dev-libs/nss utils
+dev-java/sun-jdk nsplugin -source
+dev-java/sun-jre-bin nsplugin -source
+media-sound/vorbis-tools minimal
+dev-vcs/git curl
+dev-libs/gmime mono
+media-libs/aalib slang
+gnome-base/gnome-vfs gnutls -hal
+dev-libs/DirectFB fbcon sysfs
+media-video/vlc -live aac a52 x264 cddb rtsp httpd vcd matroska nsplugin qt4 fontconfig -xml -ncurses -sdl -xosd gnutls libnotify cdda cdio ffmpeg flac stream theora xulrunner dvd -shout mpeg -svga -svg vcdx -httpd libv4l2 v4l2 vcdinfo xcb -skins win32codecs  v4l gnome -libav postproc x265
+x11-apps/xinit minimal
+net-im/gajim -libnotify trayicon xhtml idle gmail
+app-office/openoffice-bin java
+dev-libs/apr-util sqlite3
+media-sound/asunder flac
+net-misc/curl nss
+media-sound/easytag flac
+mail-filter/spamassassin tools 
+media-gfx/splashutils fbcondecor
+app-editors/gvim motif
+app-editors/vim vim-with-x bash-completion vim-pager
+media-libs/libsdl -directfb fbcon
+app-admin/conky vim-syntax mpd -nvidia weather-metar weather-xoap imlib lua-cairo lua lua-imlib
+app-cdr/cdrkit unicode
+sys-kernel/zen-sources symlink
+sys-kernel/ck-sources symlink
+sys-auth/pambase consolekit
+app-crypt/seahorse libnotify
+net-misc/openssh -ldap -X509 -ssh1
+media-libs/x264 -gtk -X
+sys-apps/coreutils xattr
+net-im/skype -qt-static v4l2
+dev-lang/mono moonlight
+app-portage/layman git mercurial subversion
+media-sound/mpd aac ao flac audiofile curl id3 lame ffmpeg libmms lastfmradio -cdio nfs samba upnp
+media-sound/sonata taglib lyrics scrobbler
+app-text/enchant aspell
+x11-drivers/nvidia-drivers -gtk
+net-misc/dhcpcd -compat -zeroconf
+media-gfx/blender blender-game -ffmpeg verse openexr python_single_target_python3_3 python_targets_python3_4
+xfce-base/xfwm4 xcomposite
+xfce-base/xfce4-meta minimal
+xfce-base/xfce-utils -lock
+xfce-base/xfce4-session -udev -xscreensaver -upower
+xfce-base/xfdesktop file-icons menu-plugin
+xfce-base/thunar exif trash-plugin udev dbus 
+xfce-extra/thunar-thumbnailers ffmpeg
+net-im/pidgin gadu -eds gnutls
+net-libs/libsoup gnome
+x11-themes/gtk-engines-murrine -themes
+games-fps/worldofpadman maps
+dev-games/cegui devil
+gnome-base/libgnome -branding
+net-libs/xulrunner java custom-optimization -networkmanager
+app-arch/p7zip wxwidgets
+media-sound/ncmpcpp curl taglib
+# move x11-libs/qt-gui dev-qt/qtgui
+dev-qt/qtgui accessibility -raster -tiff gtkstyle
+x11-terms/rxvt-unicode xterm-color pixbuf xft wcwidth -vanilla
+# move x11-libs/qt-qt3support dev-qt/qt3support
+dev-qt/qt3support accessibility
+mail-client/evolution -gstreamer -weather gmome-online-accounts spell
+
+media-libs/mesa xcb gbm
+net-im/kadu emoticons icons powerkadu -alsa jabber 
+app-portage/eix tools zsh-completion
+sys-devel/gcc libffi -gtk 
+gnome-base/gvfs archive fuse udev http gphoto2 ios gdu hal iphone udisks mtp samba nfs
+net-libs/libproxy -xulrunner
+xfce-base/xfce4-panel -startup-notification
+sys-apps/iproute2 -atm -iptables
+net-analyzer/mtr -gtk
+media-libs/libquicktime ffmpeg lame aac
+www-plugins/adobe-flash -64bit
+net-misc/openvpn iproute2 passwordsave
+media-gfx/ufraw gimp exif contrast
+media-plugins/gst-plugins-meta ffmpeg lame theora v4l
+dev-vcs/mercurial zsh-completion
+www-client/opera qt-static -gtk3
+net-p2p/rtorrent daemon color
+dev-db/sqlite fts3 extensions
+# move x11-libs/qt-sql dev-qt/qtsql
+dev-qt/qtsql -mysql
+net-dialup/ppp dhcp activefilter 
+xfce-extra/xfce4-notifyd libsexy
+sys-auth/consolekit policykit
+
+#xbmc-test
+dev-db/mysql -perl minimal
+media-tv/xbmc xrandr
+media-libs/xine-lib win32codecs
+net-fs/samba server -netapi smbsharemodes syslog -acl -winbind
+media-video/qnapi gnome
+games-strategy/warzone2100 videos
+media-fonts/liberation-fonts fontforge
+media-libs/libass enca
+app-text/ghostscript-gpl cups
+net-print/cups -X -dbus -acl -jpeg -pam -perl -png -python -ssl -tiff -usb
+x11-misc/tint2 tint2conf
+media-gfx/xloadimage -tiff
+media-libs/jpeg static-libs
+media-libs/libgpod ios
+xfce-extra/tumbler ffmpeg -gstreamer
+media-libs/libpng static-libs apng
+media-libs/gd fontconfig
+dev-libs/libxml2 -icu
+media-libs/libgphoto2 -ptp2
+sys-apps/portage python2
+virtual/jpeg static-libs
+app-pda/gtkpod webkit curl gstreamer -cdr
+virtual/ffmpeg theora threads
+www-client/firefox-bin -linguas_pl linguas_en_
+media-libs/sdl-mixer timidity mikmod midi mod
+app-office/libreoffice-bin java
+mail-client/claws-mail bogofilter smime
+# move x11-libs/qt-svg dev-qt/qtsvg
+dev-qt/qtsvg accessibility
+x11-misc/slim -branding
+media-libs/freetype static-libs
+net-libs/ntrack qt4
+app-arch/bzip2 static-libs
+sys-libs/zlib minizip static-libs
+sys-apps/gnome-disk-utility fat
+sys-apps/util-linux static-libs
+dev-libs/libgpg-error static-libs
+dev-libs/popt static-libs
+dev-libs/libgcrypt static-libs
+dev-util/anjuta subversion
+sys-apps/pciutils -zlib
+app-emulation/wine prelink udisks
+app-pda/libimobiledevice gnutls
+sys-libs/gdbm berkdb
+media-libs/libjpeg-turbo static-libs
+www-client/opera-next -gtk3
+x11-libs/libXxf86vm static-libs
+x11-libs/gtk+ vim-syntax
+dev-libs/elfutils static-libs
+net-misc/ps3mediaserver tsmuxer
+dev-cpp/glog gflags
+sys-libs/gpm static-libs
+media-libs/gst-plugins-base theora
+
+net-misc/tor stats
+media-gfx/gimp xpm jpeg2k mng
+sys-process/lsof rpc
+media-sound/pulseaudio equalizer gnome -orc -X qt4
+net-dns/avahi utils
+sci-geosciences/googleearth -system-mdns
+www-plugins/adobe-flash 64bit 
+gnome-base/gdm -branding -fallback -systemd xinerama gnome-keyring
+net-proxy/tsocks tordns
+gnome-extra/evolution-data-server -api-doc-extras
+dev-java/oracle-jre-bin nsplugin
+media-libs/harfbuzz icu
+net-proxy/tinyproxy minimal -filter-proxy -upstream-proxy -xtinyproxy-header
+net-fs/nfs-utils nfsidmap -nfsv4 ipv6
+net-fs/cifs-utils -caps -caps-ng -upcall -acl -ads
+xfce-base/xfce4-settings libcanberra 
+dev-python/numpy python_targets_python3_3
+dev-python/setuptools python_targets_python3_3
+media-libs/gstreamer introspection
+app-crypt/gcr vala
+www-client/midori -webkit2 deprecated
+net-libs/webkit-gtk -geoloc
+# required by dev-ruby/rdoc-4.1.2[ruby_targets_ruby21]
+# required by dev-lang/ruby-2.1.4-r1[rdoc]
+# required by dev-ruby/json-1.8.1[ruby_targets_ruby21]
+# required by dev-lang/ruby-2.0.0_p576
+# required by dev-ruby/rubygems-2.4.2[ruby_targets_ruby20]
+# required by virtual/rubygems-7
+# required by dev-ruby/rake-10.3.2[-test,ruby_targets_ruby21]
+>=dev-ruby/racc-1.4.12 ruby_targets_ruby21
+# required by virtual/rubygems-7
+# required by dev-ruby/rdoc-4.1.2[-test,ruby_targets_ruby21]
+# required by dev-lang/ruby-2.1.4-r1[rdoc]
+# required by dev-ruby/json-1.8.1[ruby_targets_ruby21]
+# required by dev-lang/ruby-2.0.0_p576
+# required by dev-ruby/rake-10.3.2[ruby_targets_ruby20]
+# required by dev-ruby/racc-1.4.12[-test,ruby_targets_ruby19]
+>=dev-ruby/rubygems-2.4.2 ruby_targets_ruby21
+# required by dev-lang/ruby-2.1.4-r1
+# required by dev-ruby/rdoc-4.1.2[ruby_targets_ruby21]
+# required by dev-lang/ruby-1.9.3_p547[rdoc]
+# required by dev-ruby/racc-1.4.12[ruby_targets_ruby19]
+>=dev-ruby/rake-10.3.2 ruby_targets_ruby21
+# required by dev-ruby/rdoc-4.1.2[ruby_targets_ruby21]
+# required by dev-lang/ruby-2.1.4-r1[rdoc]
+# required by dev-ruby/rubygems-2.4.2[ruby_targets_ruby21]
+# required by virtual/rubygems-7
+# required by dev-ruby/rake-10.3.2[-test,ruby_targets_ruby21]
+# required by dev-ruby/racc-1.4.12[-test,ruby_targets_ruby19]
+>=dev-ruby/json-1.8.1 ruby_targets_ruby21
+# required by dev-qt/qtcore-5.2.1::unity-gentoo
+# required by dev-qt/qtopengl-5.2.1::unity-gentoo
+# required by dev-qt/qtopengl (argument)
+>=dev-libs/libpcre-8.36 pcre16
+# required by dev-lang/ruby-2.1.4-r1[rdoc]
+# required by dev-ruby/json-1.8.1[ruby_targets_ruby21]
+# required by dev-lang/ruby-2.0.0_p576
+# required by dev-ruby/rubygems-2.4.2[ruby_targets_ruby20]
+# required by virtual/rubygems-7
+# required by dev-ruby/rake-10.3.2[-test,ruby_targets_ruby21]
+# required by dev-ruby/racc-1.4.12[-test,ruby_targets_ruby19]
+>=dev-ruby/rdoc-4.1.2 ruby_targets_ruby21
+media-libs/gexiv2 introspection
+# required by dev-ruby/rake-10.4.2[-test,ruby_targets_ruby21]
+# required by dev-ruby/json-1.8.2-r1[-test,-doc,ruby_targets_ruby21]
+# required by dev-ruby/rdoc-4.1.2-r1[ruby_targets_ruby21]
+# required by dev-lang/ruby-1.9.3_p551[rdoc]
+# required by dev-ruby/rubygems-2.4.5[ruby_targets_ruby19]
+>=virtual/rubygems-10 ruby_targets_ruby21
+# required by media-gfx/blender-2.72b-r3::gentoo
+# required by @preserved-rebuild (argument)
+>=dev-python/numpy-1.9.1 python_targets_python3_4
+# required by dev-python/requests-2.5.1::gentoo
+# required by media-gfx/blender-2.72b-r3::gentoo
+# required by @preserved-rebuild (argument)
+>=dev-python/chardet-2.3.0 python_targets_python3_4
+# required by media-gfx/blender-2.72b-r3::gentoo
+# required by @preserved-rebuild (argument)
+>=dev-python/requests-2.5.1 python_targets_python3_4
+# required by dev-python/numpy-1.9.1::gentoo
+# required by media-gfx/blender-2.72b-r3::gentoo
+# required by @preserved-rebuild (argument)
+>=dev-python/setuptools-12.0.5 python_targets_python3_4
+# required by dev-lang/ruby-2.2.0-r1::gentoo
+# required by virtual/rubygems-10::gentoo[ruby_targets_ruby22]
+# required by net-libs/webkit-gtk-2.4.8-r200::gentoo
+# required by net-libs/webkit-gtk (argument)
+>=dev-ruby/rake-10.4.2 ruby_targets_ruby22
+# required by dev-lang/ruby-2.2.0-r1::gentoo
+# required by virtual/rubygems-10::gentoo[ruby_targets_ruby22]
+# required by net-libs/webkit-gtk-2.4.8-r200::gentoo
+# required by net-libs/webkit-gtk (argument)
+>=dev-ruby/power_assert-0.2.2 ruby_targets_ruby22
+# required by dev-lang/ruby-2.2.0-r1::gentoo[rdoc]
+# required by virtual/rubygems-10::gentoo[ruby_targets_ruby22]
+# required by net-libs/webkit-gtk-2.4.8-r200::gentoo
+# required by net-libs/webkit-gtk (argument)
+>=dev-ruby/rdoc-4.1.2-r1 ruby_targets_ruby22
+# required by dev-lang/ruby-2.2.0-r1::gentoo
+# required by virtual/rubygems-10::gentoo[ruby_targets_ruby22]
+# required by net-libs/webkit-gtk-2.4.8-r200::gentoo
+# required by net-libs/webkit-gtk (argument)
+>=dev-ruby/json-1.8.2-r1 ruby_targets_ruby22
+# required by dev-lang/ruby-2.2.0-r1::gentoo
+# required by virtual/rubygems-10::gentoo[ruby_targets_ruby22]
+# required by net-libs/webkit-gtk-2.4.8-r200::gentoo
+# required by net-libs/webkit-gtk (argument)
+>=dev-ruby/minitest-5.5.1 ruby_targets_ruby22
+# required by dev-ruby/test-unit-3.0.9-r1::gentoo[-test,ruby_targets_ruby22]
+# required by dev-lang/ruby-2.2.0-r1::gentoo
+# required by dev-ruby/power_assert-0.2.2::gentoo[ruby_targets_ruby22]
+>=virtual/rubygems-10 ruby_targets_ruby22
+# required by dev-lang/ruby-2.2.0-r1::gentoo
+# required by virtual/rubygems-10::gentoo[ruby_targets_ruby22]
+# required by net-libs/webkit-gtk-2.4.8-r200::gentoo
+# required by net-libs/webkit-gtk (argument)
+>=dev-ruby/test-unit-3.0.9-r1 ruby_targets_ruby22
+# required by virtual/rubygems-10::gentoo[ruby_targets_ruby22]
+# required by net-libs/webkit-gtk-2.4.8-r200::gentoo
+# required by net-libs/webkit-gtk (argument)
+>=dev-ruby/rubygems-2.4.5 ruby_targets_ruby22
+# required by dev-ruby/rdoc-4.1.2-r1::gentoo[ruby_targets_ruby22]
+# required by dev-lang/ruby-2.2.0-r1::gentoo[rdoc]
+# required by dev-ruby/test-unit-3.0.9-r1::gentoo[ruby_targets_ruby22]
+>=dev-ruby/racc-1.4.12 ruby_targets_ruby22
+# required by x11-drivers/nvidia-drivers-349.12::gentoo[X,multilib]
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libXext-1.3.3 abi_x86_32
+# required by x11-libs/libXext-1.3.3::gentoo
+# required by x11-drivers/nvidia-drivers-349.12::gentoo[X,multilib]
+# required by @selected
+# required by @world (argument)
+>=x11-proto/xextproto-7.3.0 abi_x86_32
+# required by x11-libs/libXext-1.3.3::gentoo
+# required by x11-drivers/nvidia-drivers-349.12::gentoo[X,multilib]
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libX11-1.6.3 abi_x86_32
+# required by x11-libs/libxcb-1.11-r1::gentoo
+# required by x11-libs/libX11-1.6.3::gentoo
+# required by x11-libs/cairo-1.14.2::gentoo[X]
+# required by mail-client/thunderbird-bin-31.6.0::gentoo
+# required by @selected
+# required by @world (argument)
+>=x11-proto/xcb-proto-1.11 abi_x86_32 python_targets_python3_4
+# required by x11-libs/libxcb-1.11-r1::gentoo
+# required by x11-libs/libX11-1.6.3::gentoo
+# required by x11-libs/cairo-1.14.2::gentoo[X]
+# required by mail-client/thunderbird-bin-31.6.0::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-libs/libpthread-stubs-0.3-r1 abi_x86_32
+# required by x11-libs/libxcb-1.11-r1::gentoo
+# required by x11-libs/libX11-1.6.3::gentoo
+# required by x11-libs/cairo-1.14.2::gentoo[X]
+# required by mail-client/thunderbird-bin-31.6.0::gentoo
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libXau-1.0.8 abi_x86_32
+# required by x11-libs/libxcb-1.11-r1::gentoo
+# required by x11-libs/libX11-1.6.3::gentoo
+# required by x11-libs/cairo-1.14.2::gentoo[X]
+# required by mail-client/thunderbird-bin-31.6.0::gentoo
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libXdmcp-1.1.2 abi_x86_32
+# required by x11-libs/libX11-1.6.3::gentoo
+# required by x11-libs/cairo-1.14.2::gentoo[X]
+# required by mail-client/thunderbird-bin-31.6.0::gentoo
+# required by @selected
+# required by @world (argument)
+>=x11-proto/xproto-7.0.27 abi_x86_32
+# required by x11-libs/libX11-1.6.3::gentoo
+# required by x11-libs/cairo-1.14.2::gentoo[X]
+# required by mail-client/thunderbird-bin-31.6.0::gentoo
+# required by @selected
+# required by @world (argument)
+>=x11-proto/inputproto-2.3.1 abi_x86_32
+# required by x11-libs/libX11-1.6.3::gentoo
+# required by x11-libs/cairo-1.14.2::gentoo[X]
+# required by mail-client/thunderbird-bin-31.6.0::gentoo
+# required by @selected
+# required by @world (argument)
+>=x11-proto/xf86bigfontproto-1.2.0-r1 abi_x86_32
+# required by x11-libs/libX11-1.6.3::gentoo
+# required by x11-libs/cairo-1.14.2::gentoo[X]
+# required by mail-client/thunderbird-bin-31.6.0::gentoo
+# required by @selected
+# required by @world (argument)
+>=x11-proto/kbproto-1.0.6-r1 abi_x86_32
+# required by x11-libs/libX11-1.6.3::gentoo
+# required by x11-libs/cairo-1.14.2::gentoo[X]
+# required by mail-client/thunderbird-bin-31.6.0::gentoo
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libxcb-1.11-r1 abi_x86_32
+media-video/gnome-mplayer ipod
+media-video/smplayer qt4
+# required by media-plugins/grilo-plugins-0.2.13::gentoo
+# required by media-video/totem-3.14.2::gentoo
+# required by totem (argument)
+>=media-libs/grilo-0.2.11 playlist
+# required by media-video/miro-6.0::gentoo
+# required by miro (argument)
+>=net-dns/avahi-0.6.31-r7 mdnsresponder-compat
+# required by net-fs/samba-4.1.18::gentoo
+# required by samba (argument)
+>=app-crypt/heimdal-1.5.3-r2 -ssl
+media-video/mpv cdio samba libmpv

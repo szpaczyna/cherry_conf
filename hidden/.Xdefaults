@@ -1,0 +1,44 @@
+urxvt*saveLines:        32767
+urxvt*scrollTtyKeypress:true
+urxvt*scrollTtyOutput:  true
+urxvt*scrollBar:        false
+urxvt*loginShell:       true
+urxvt*internalBorder:   0
+urxvt*termName:         rxvt-unicode
+urxvt*inheritPixmap:    true
+urxvt*shading:          20
+urxvt*tintColor:        #FFFFFF
+urxvt*font:             xft:Liberation Mono:pixelsize=13
+#urxvt*font:            xft:Terminus:pixelsize=18
+xterm*utf8:             1
+xterm*eightBitInput:    true
+xterm*metaSendsEscape:  true
+xterm*faceName:         Bitstream Vera Saio
+xterm*faceSize:         10
+urxvt*foreground: 	#DDDDDD
+urxvt*background: 	#334433
+urxvt*cursorColor: 	white
+urxvt*cursorColor2: 	#945822
+urxvt*cursorBlink:	true 
+urxvt*pointerColor: 	white
+urxvt*geometry:		82x26
+urxvt.xftAntialias:	true
+urxvt*colorUL:		Green
+
+urxvt.boldFont:		xft:DejaVu Sans Mono Bold:pixelsize=14
+urxvt.italicFont:	xft:DejaVu Sans Mono Oblique:pixelsize=14
+URxvt.keysym.Home:      \033[1~
+URxvt.keysym.End:       \033[4~
+URxvt.keysym.M-Up:      \033
+URxvt.keysym.M-Down:    \033
+
+Xcursor.theme: 		Gold
+Xcursor.size: 		32
+urxvt.urlLauncher:	arora
+urxvt*perl-ext-common:  selection-autotransform,matcher,searchable-scrollback
+urxvt*perl-lib:		/usr/lib/urxvt/perl/
+
+urxvt.matcher.button: 3
+URxvt.tabbed.tabbar-fg: 31
+URxvt.tabbed.tabbar-bg: 80
+URxvt.tabbed.tab-fg:    7

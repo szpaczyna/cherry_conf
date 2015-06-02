@@ -1,0 +1,297 @@
+#!/usr/bin/python2.7
+#-*- coding: utf8 -*-
+
+# Copyright 2009-2012 Kamil Winczek <kwinczek@gmail.com>
+#
+# This file is part of series.py.
+#
+# series.py is free software: you can redistribute it and/or modify it under
+# the terms of the GNU General Public License as published by the Free
+# Software Foundation, either version 3 of the License, or (at your option)
+# any later version.
+#
+# series.py is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+# FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
+# for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with series.py. If not, see http://www.gnu.org/licenses/.
+
+try:
+    import sys
+    import os
+    try:
+        import urllib2
+    except ImportError:
+        import urllib as urllib2
+
+    import tvs.cache as cache
+    import tvs.config as config
+    import tvs.formatter as frmt
+
+except ImportError as e:
+    sys.stderr.write('Input error: %s\n' % (e.args[0],))
+    sys.exit(3)
+
+# ---------------------------------------------------------------------
+
+class AppError(Exception):
+    def __init__(self, msg):
+        Exception.__init__(self, msg)
+        self.args = (msg,)
+
+
+    def __repr__(self):
+        return self.args[0]
+
+
+    __str__ = __repr__
+
+# ---------------------------------------------------------------------
+# Main
+# ---------------------------------------------------------------------
+
+def main():
+    # Parse cmdline
+    (options, args) = config.opt_parse()
+
+    # Read config file
+    (series, templates, g_creds) = config.read_config_file(options.configfile)
+
+    # Read series from command line
+    if args:
+        series = [el.lower() for el in args]
+
+    if not series and not options.print_settings_and_exit:
+        sys.stderr.write("""No series configured neither in config file nor commandline.\n""")
+        sys.stderr.write("""Add: series=showA,showB... to %s or any other file specified by --file\n""" % (config.DEFAULT_CONFIG_FILE,))
+        sys.exit(1)
+
+    # Get rid of spaces in series names
+    series = [el.replace(' ', '') for el in series]
+
+    # options.g_calendar? (change me, might be moved to block further down the file) Are credentials configured?
+    # As said above, this should be checked while performing calendar action. I am not sure what need to be achieved here.
+    if options.g_calendar:
+        # I hate that check below, how can this be redone?
+        if len(g_creds['login']) == 0 or len(g_creds['passwd']) == 0:
+            sys.stderr.write("""In order to use google calendar feature you need to configure g_login and g_passwd variables in config file!\n""")
+            sys.exit(1)
+
+    # Print settings and exit
+    if options.print_settings_and_exit:
+        sys.stdout.write("series=%s\n" % ','.join(series))
+        for k, v in templates.items():
+            v = v.replace("\n", "\\n")
+            v = v.replace("\t", "\\t")
+            sys.stdout.write("%s=%s\n"  % (k, v))
+        sys.exit()
+
+    # Disable spinner if no spinner executable found in PATH.
+    def which(program):
+      def is_exe(fpath):
+          return os.path.isfile(fpath) and os.access(fpath, os.X_OK)
+
+      fpath, fname = os.path.split(program)
+      if fpath:
+          if is_exe(program):
+              return program
+      else:
+          for path in os.environ["PATH"].split(os.pathsep):
+              exe_file = os.path.join(path, program)
+              if is_exe(exe_file):
+                  return exe_file
+
+      return None
+
+    if not which('tvs_spin.py'):
+      options.spinner = False
+
+    # Debug
+    if options.debug:
+        sys.stdout.write('Series: %s\n\n' % (series))
+
+        print('+'+'-'*9, 'Options', '-'*10)
+        for k, v in options.__dict__.items():
+            print( '| %-15.15s: %s' % (k, v))
+        print('+'+'-'*40)
+
+        print()
+        print('+'+'-'*9, 'Formatter templates', '-'*10)
+        for k, v in templates.items():
+            print(r'| %-27.27s: %s' % (k, v))
+        print('+'+'-'*28)
+
+    # Ensure that day (for --when) header is not printed more than once.
+    when_header_not_printed = True
+
+    # Print shows that could not be found at the end.
+    notfound = []
+    # Some series might have no episodes information at all. Print them at the end.
+    noepisodes = []
+
+    # Main loop.
+    for show_name in sorted(series):
+        try:
+            # Retrieve show object.
+            show = cache.Cache(show_name, options).get_show()
+
+            if not show:
+                notfound.append(show_name)
+                continue
+
+            # Some shows might have no episodes.
+            if len(show.episodes) == 0:
+                noepisodes.append(show.details['name'])
+                continue
+
+            # For --when, -w.
+            if options.when:
+                episodes = show.get_episodes_by_date(options.when)
+
+                if len(episodes) == 0: # not every specified show has episodes at given date.
+                    continue
+
+                for episode in episodes:
+                    formatter = frmt.Formatter(show, options)
+
+                    if when_header_not_printed: # Printing header
+                        print(formatter.format_simple(templates['when_day_format']))
+                        when_header_not_printed = False
+
+                    # Need to create an ep_* map for episode for back compatibility's sake.
+                    for k, v  in episode.items():
+                        formatter.map['ep_'+ k] = v
+
+                    print(formatter.format_simple(templates['when_name_format']))
+                    print(formatter.format(templates['when_format'], episode=episode))
+
+            # For --season, -s.
+            elif options.season and not options.episode:
+                episodes = show.get_episodes(options.season, specials=options.with_specials)
+
+                if not episodes:
+                    print('No episodes in that season or season doesn\'t exist.\n')
+                    continue
+
+                formatter = frmt.Formatter(show, options, templates['date_format'])
+
+                # Populate season_no according to requested action.
+                if options.season == -1:
+                    formatter.map['season_no'] = '(All)'
+                elif options.season == -2:
+                    formatter.map['season_no'] = '%02d' % max([ep['seasonno'] for ep in episodes])
+                else:
+                    formatter.map['season_no'] = '%02d' % options.season
+
+                print(formatter.format_simple(templates['list_header_format']))
+
+                if options.verbose:             # Verbose
+                    for episode in episodes:
+                        print(formatter.format(templates['list_format_verbose'], options.season, episode))
+                    if options.season -1:       # Printing all episodes, print summary then.
+                        print('\n%s episodes in %s seasons.' % (len(episodes), show.details['totalseasons']))
+
+                else:
+                    for episode in episodes:
+                        print(formatter.format(templates['list_format'], options.season, episode=episode))
+
+            # For --season and --episode, -s and -e.
+            elif options.season and options.episode:
+                if options.season == -1:
+                    print('Use other value than all.\n')
+                    sys.exit()
+
+                formatter = frmt.Formatter(show, options)
+
+                try:
+                    episode = [ep for ep in show.get_episodes(options.season, False) if ep['seasonnum'] == options.episode][0]
+                except IndexError:
+                    print('There is no such episode in that season.\n')
+                    sys.exit()
+
+                # Printing
+                if not templates['single_header_format'] == '':
+                    print(formatter.format_simple(templates['single_header_format']))
+                print(formatter.format(templates['single_format'], options.season, episode))
+
+            # If no options given, print list of series [ Default action ].
+            else:
+                formatter = frmt.Formatter(show, options, templates['date_format'])
+
+                # Provide formatter information about previous and next episodes.
+                prev, next = show.get_prev_next_episode()
+
+                frmt.Formatter.add_prev_next(formatter, prev, next)
+
+                # Header printing
+                print(formatter.format_simple(templates['info_header_format']))
+
+                if options.verbose:
+                    formatter.map['genres_sorted'] = ', '.join(formatter.map['genres'])
+                    print(formatter.format_simple(templates['info_verbose_format']))
+
+
+                # Unknown date? Set it to Unaired.
+                try:
+                    if not formatter.map['next_ep_airdate']:
+                       formatter.map['next_ep_airdate'] = 'Unaired'
+                except KeyError:
+                    pass
+
+                # Print.
+                # Previous episode.
+                print(formatter.format(templates['info_prev_format'], episode=prev))
+                # Next episode (if known).
+                if next:
+                    print(formatter.format(templates['info_next_format'], episode=next))
+                elif 'ended' in show['status'].lower():
+                    print('\t(No more episodes. Show ended.)')
+                elif 'canceled' in show['status'].lower():
+                    print('\t(No more episodes. Show canceled.)')
+
+            if options.g_calendar:
+                # Perform actions you want
+                # Or if only calendar actions should be performed (without printing out anything) that should be moved up and become one of the elif's.
+                pass
+
+
+        except (urllib2.URLError, urllib2.HTTPError) as e:
+            sys.stderr.write('\rNetwork error: %s\n' % e)
+            if options.debug: raise
+        except AppError as e:
+            sys.stderr.write('\rError: %s: %s\n' % (e.args[0], item,))
+            if options.debug: raise
+        except AttributeError:
+            if options.debug: raise
+            print('ERROR HANDLING')
+        except KeyboardInterrupt:
+            sys.stdout.write("\rCanceled.\n")
+            try:
+                cache.p.terminate()
+            except:
+                pass
+            sys.exit(1)
+        except Exception as e:
+            if options.debug: raise
+            sys.stderr.write('\rGeneral error: %s\n' % (': '.join(e.args)))
+            sys.exit(2)
+        finally:
+            try:
+                cache.p.terminate()
+                sys.stdout.flush()
+            except:
+                pass
+
+    # Print shows we couldn't find:
+    if len(notfound) > 0:
+        sys.stderr.write("Show(s) %s was/were not found.\n" % ', '.join(notfound))
+
+    if len(noepisodes) > 0:
+        sys.stderr.write("Show(s) %s have no episodes at all.\n" % ', '.join(noepisodes))
+
+# ---------------------------------------------------------------------
+
+if __name__ == "__main__":
+    main()

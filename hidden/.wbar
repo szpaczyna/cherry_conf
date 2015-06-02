@@ -1,0 +1,85 @@
+i: /usr/share/pixmaps/wbar/dock.png
+c: wbar --bpress --above-desk --pos top --grow --offset 10 --displace 700 --isize 35 --idist 5 --nanim 4 --balfa 90 --falfa 90 --filter 1 --fc 0xffcfbd19
+t: /usr/share/fonts/corefonts/comic/13
+
+i: /home/shpaq/.icons/buuf/wbar/home.png
+c: thunar $HOME
+t: home
+
+i: /home/shpaq/.icons/buuf/wbar/terminal.png
+c: terminator --geometry=800x440
+t: terminal
+
+i: /home/shpaq/.icons/buuf/wbar/opera.png
+c: opera-developer
+t: shpaq's browser
+
+i: /home/shpaq/.icons/buuf/wbar/firefox.png
+c: firefox-bin
+t: firefox
+
+i: /home/shpaq/.icons/buuf/wbar/chrome.png
+c: google-chrome
+t: chrome
+
+i: /home/shpaq/.icons/buuf/wbar/liferea.png
+c: liferea
+t: news
+
+i: /home/shpaq/.icons/buuf/wbar/evolution.png
+c: evolution
+t: shpaq's mail
+
+i: /home/shpaq/.icons/buuf/wbar/thunderbird.png
+c: thunderbird-bin
+t: martynka's mail
+
+i: /home/shpaq/.icons/buuf/wbar/shotwell.png
+c: shotwell
+t: photos manager
+
+i: /home/shpaq/.icons/buuf/wbar/gimp.png
+c: gimp
+t: gimp
+
+i: /home/shpaq/.icons/buuf/wbar/blender.png
+c: blender
+t: blender
+
+i: /home/shpaq/.icons/buuf/wbar/gmpc.png
+c: gmpc
+t: music
+
+i: /home/shpaq/.icons/buuf/wbar/vlc.png
+c: smplayer
+t: video
+
+i: /home/shpaq/.icons/buuf/wbar/gvim.png
+c: gedit
+t: editor
+
+i: /home/shpaq/.icons/buuf/wbar/mixer.png
+c: pavucontrol
+t: sound control
+
+#i: /home/shpaq/.icons/buuf/wbar/midori.png
+#c: midori
+#t: midoru
+
+i: /home/shpaq/.icons/buuf/wbar/onion.png
+#c: /home/shpaq/tor/start-tor-browser
+c: midori
+t: anonymus browsing
+
+i: /home/shpaq/.icons/buuf/wbar/minecraft.png
+c: cd /home/shpaq/.minecraft && java -jar /home/shpaq/scripts/minecraft.jar
+t: minecraft
+
+i: /home/shpaq/.icons/buuf/wbar/malinaon.png
+c: sudo /usr/local/sbin/rpi.sh 100 && notify-send -i gdu-mount "rPi can play audio/video now!"
+t: rPi 100 Mbps
+
+i: /home/shpaq/.icons/buuf/wbar/malinaoff.png
+c: sudo /usr/local/sbin/rpi.sh 1000 && notify-send -i gdu-detach "rPi is now detached. Playing audio/video won't work properly!"
+t: rPi 1Gbps
+

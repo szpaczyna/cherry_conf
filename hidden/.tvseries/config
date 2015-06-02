@@ -1,0 +1,17 @@
+series=americanhorrorstory,boardwalkempire,bluebloods,grimm,homeland,haven,walkingdead,blacklist,sonsofanarchy,californication,castle2009,marvelsagentsofshield,whitecollar,justified,fallingskies,luther,terriers,utopia,gameofthrones,glee,banshee,grimm,hemlockgrove
+date_format=%d %h %Y
+
+info_header_format=[ %(c_green)s%(name)s%(c_none)s ]
+info_prev_format=Previous episode: [ %(c_red)s%(prev_ep_ident)s%(c_none)s ] %(prev_ep_title)-21.20s %(c_yellow)s @ %(prev_ep_airdate)s%(c_none)s
+info_next_format=    Next episode: [ %(c_red)s%(next_ep_ident)s%(c_none)s ] %(next_ep_title)-21.20s %(c_yellow)s @ %(next_ep_airdate)s%(c_none)s
+list_header_format=[ %(c_blue)s%(name)s:%(c_red)s Season %(season_no)s%(c_none)s ]
+
+list_format_verbose=No: %(ep_epnum)04s  [%(ep_ident)s] %(ep_title)-25.24s @ %(ep_airdate)s\n\t\t%(ep_link)s
+when_day_format=.. %(when_day)s ..
+when_format=%(ep_airdate)s [%(ep_ident)s] %(ep_title)s
+single_header_format=
+single_format=%(name)s [%(ep_ident)s] %(ep_title)s.avi
+info_verbose_format=   Country: %(origin_country)s\n   Network: %(network)s\n   Airtime: %(airday)s at %(airtime)s [%(timezone)s]\n   Runtime: %(runtime)s mins\n     Class: %(classification)s\n   Started: %(started)s\n    Status: %(status)s\n    Genres: %(genres)s\n   Seasons: %(totalseasons)s\n  Episodes: %(totalepisodes)s\n   Weblink: %(showlink)s\n      Akas: \n%(akas)s\n
+when_name_format=[ %(c_green)s%(name)s%(c_none)s ]
+list_format=[%(ep_ident)s] %(ep_title)-25.24s @ %(ep_airdate)s
+

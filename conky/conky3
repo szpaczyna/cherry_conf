@@ -1,0 +1,40 @@
+use_xft yes 
+xftfont 123:size=8
+xftalpha 0.1 
+update_interval 1
+total_run_times 0
+own_window yes 
+own_window_type override
+own_window_transparent yes 
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+background no
+double_buffer yes 
+#minimum_size 200 30
+maximum_width 950 
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color a7a7a7
+default_shade_color black
+default_outline_color green
+no_buffers yes 
+uppercase no
+cpu_avg_samples 2
+net_avg_samples 1
+override_utf8_locale yes 
+use_spacer left
+gap_x 70
+gap_y 100
+alignment bottom_right
+mpd_host localhost
+mpd_port 6600
+
+TEXT
+$if_mpd_playing
+${font Ubuntu:pixelsize=16}
+Artist:$alignr${mpd_artist}${color}
+Title:$alignr${mpd_title 50}${color}
+Album:$alignr${mpd_album 50}${color}
+Time:$alignr$mpd_elapsed/$mpd_length
+$endif

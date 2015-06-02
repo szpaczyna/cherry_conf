@@ -1,0 +1,44 @@
+use_xft yes 
+xftfont 123:size=8
+xftalpha 0.1 
+update_interval 1
+total_run_times 0
+own_window yes 
+#own_window_type override
+own_window_type conky
+own_window_transparent yes 
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes 
+minimum_size 200 30
+maximum_width 950 
+draw_shades yes 
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color a7a7a7
+default_shade_color black
+default_outline_color green
+alignment tr
+gap_x 40
+gap_y 25
+no_buffers yes 
+uppercase no
+cpu_avg_samples 2
+net_avg_samples 1
+override_utf8_locale yes 
+use_spacer left
+
+mpd_host localhost
+mpd_port 6600
+
+TEXT
+${font Ubuntu:pixelsize=24}Load: $alignr$loadavg${color}
+${font Ubuntu:pixelsize=16}${alignr}MEM ${color #FCD97B}$memperc${color}% SWAP ${color #FCD97B}$swapperc${color}%${font Ubuntu:pixelsize=14}
+
+${alignr}${offset -10}Gentoo: ${color #FCD97B}${fs_used_perc}${color}%
+${alignr}${offset -18}Home:   ${color #FCD97B}${fs_used_perc /home}${color}%
+${alignr}${offset -26}Music:   ${color #FCD97B}${fs_used_perc /media/music}${color}%
+${alignr}${offset -34}Videos: ${color #FCD97B}${fs_used_perc /media/video}${color}%
+${alignr}${offset -42}Dloads: ${color #FCD97B}${fs_used_perc /media/downloads}${color}%
+${offset 86}Down: ${color #FCD97B}${downspeed eth0}${color}
+${offset 82}Up: ${color #FCD97B}${upspeed eth0}

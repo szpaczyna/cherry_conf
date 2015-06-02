@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<opml version="1.0">
+  <head>
+    <title>Liferea Feed List Export</title>
+  </head>
+  <body>
+    <outline title="Nie przeczytane" text="Nie przeczytane" description="Nie przeczytane" type="vfolder" id="rhxrvkr" sortColumn="state" sortReversed="false" matchType="any" collapsed="true">
+      <outline type="rule" text="Stan przeczytania" rule="unread" value="" additive="true"/>
+    </outline>
+    <outline title="Subskrypcje" text="Subskrypcje" description="Subskrypcje" type="folder" id="etorajk" sortColumn="time" expanded="true">
+      <outline title="Comics" text="Comics" description="Comics" type="folder" id="eldscrg" sortColumn="time" expanded="true">
+        <outline title="What's New with Phil and Dixie!" text="What's New with Phil and Dixie!" description="What's New with Phil and Dixie!" type="rss" id="vyrggqj" sortColumn="time" xmlUrl="http://www.airshipentertainment.com/growf/growfcomic/growf.rss" htmlUrl="http://www.airshipentertainment.com/" updateInterval="-1" collapsed="true"/>
+        <outline title="ZUCH RYSUJE" text="ZUCH RYSUJE" description="ZUCH RYSUJE" type="rss" id="cqmbpdh" sortColumn="time" xmlUrl="http://www.zuchrysuje.pl/feed/" htmlUrl="http://www.zuchrysuje.pl" updateInterval="-1" collapsed="true"/>
+        <outline title="Explosm.net" text="Explosm.net" description="Explosm.net" type="rss" id="medygjy" sortColumn="time" xmlUrl="http://feeds.feedburner.com/Explosm" htmlUrl="http://www.explosm.net" updateInterval="-1" collapsed="true"/>
+        <outline title="Girl Genius" text="Girl Genius" description="Girl Genius" type="rss" id="iwlxwcf" sortColumn="time" xmlUrl="http://www.girlgeniusonline.com/ggmain.rss" htmlUrl="http://www.girlgeniusonline.com/" updateInterval="-1" collapsed="true"/>
+        <outline title="Penny Arcade" text="Penny Arcade" description="Penny Arcade" type="rss" id="ypdmjak" sortColumn="time" xmlUrl="http://feeds.penny-arcade.com/pa-mainsite" htmlUrl="http://penny-arcade.com" updateInterval="-1" collapsed="true"/>
+        <outline title="boli blog" text="boli blog" description="boli blog" type="rss" id="heprjgb" sortColumn="time" xmlUrl="http://boli.blog.pl/feed/" htmlUrl="http://boli.blog.pl" updateInterval="-1" collapsed="true"/>
+        <outline title="Diesel Sweeties webcomic by rstevens" text="Diesel Sweeties webcomic by rstevens" description="Diesel Sweeties webcomic by rstevens" type="rss" id="xamxgrt" sortColumn="time" xmlUrl="http://www.dieselsweeties.com/ds-unifeed.xml" htmlUrl="http://dieselsweeties.com" updateInterval="-1" collapsed="true"/>
+        <outline title="Lust Boat" text="Lust Boat" description="Lust Boat" type="rss" id="qjltbll" sortColumn="time" xmlUrl="http://lustboat.comicgenesis.com/rss.xml" htmlUrl="http://lustboat.comicgenesis.com" updateInterval="-1" collapsed="true"/>
+        <outline title="Chata Wuja Freda" text="Chata Wuja Freda" description="Chata Wuja Freda" type="rss" id="kcrafim" sortColumn="time" xmlUrl="http://chatolandia.pl/feed/" htmlUrl="http://chatolandia.pl" updateInterval="-1" collapsed="true"/>
+        <outline title="User Friendly RSS Feed" text="User Friendly RSS Feed" description="User Friendly RSS Feed" type="rss" id="kndaroj" sortColumn="time" xmlUrl="http://www.userfriendly.org/rss/uf.rss" htmlUrl="http://www.userfriendly.org/static/" updateInterval="-1" collapsed="true"/>
+        <outline title="The Joy of Tech" text="The Joy of Tech" description="The Joy of Tech" type="rss" id="hqikarc" sortColumn="time" xmlUrl="http://www.joyoftech.com/joyoftech/jotblog/index.xml" htmlUrl="http://www.geekculture.com/joyoftech/index.html" updateInterval="-1" collapsed="true"/>
+        <outline title="FreakAngels" text="FreakAngels" description="FreakAngels" type="rss" id="ueceobb" sortColumn="time" xmlUrl="http://feeds2.feedburner.com/freakangels" htmlUrl="http://www.freakangels.com" updateInterval="-1" collapsed="true"/>
+        <outline title="PvPonline" text="PvPonline" description="PvPonline" type="rss" id="iqfdbbd" sortColumn="time" xmlUrl="http://www.pvponline.com/feed" htmlUrl="http://www.pvponline.com/" updateInterval="-1" collapsed="true"/>
+        <outline title="QC RSS" text="QC RSS" description="QC RSS" type="rss" id="mrliopt" sortColumn="time" xmlUrl="http://www.questionablecontent.net/QCRSS.xml" htmlUrl="http://www.questionablecontent.net" updateInterval="-1" collapsed="true"/>
+        <outline title="Megatokyo Comics" text="Megatokyo Comics" description="Megatokyo Comics" type="rss" id="wycmcek" sortColumn="time" xmlUrl="http://megatokyo.com/rss/strips.xml" htmlUrl="http://www.megatokyo.com" updateInterval="-1" collapsed="true"/>
+        <outline title="garfield minus garfield" text="garfield minus garfield" description="garfield minus garfield" type="rss" id="mdnwyxe" sortColumn="time" xmlUrl="http://garfieldminusgarfield.net/rss" htmlUrl="http://garfieldminusgarfield.net/" updateInterval="-1" collapsed="true"/>
+        <outline title="The Adventures of Dr. McNinja" text="The Adventures of Dr. McNinja" description="The Adventures of Dr. McNinja" type="rss" id="fdqtedv" sortColumn="time" xmlUrl="http://drmcninja.com/feed/" htmlUrl="http://drmcninja.com" updateInterval="-1" collapsed="true"/>
+        <outline title="Ctrl+Alt+Del" text="Ctrl+Alt+Del" description="Ctrl+Alt+Del" type="rss" id="ditbpqj" sortColumn="time" xmlUrl="http://cdn.cad-comic.com/rss.xml" htmlUrl="http://www.cad-comic.com/" updateInterval="-1" collapsed="true"/>
+      </outline>
+      <outline title="Games" text="Games" description="Games" type="folder" id="mbpwowq" sortColumn="time" expanded="true">
+        <outline title="Eurogamer.pl - ps3" text="Eurogamer.pl - ps3" description="Eurogamer.pl - ps3" type="rss" id="vxlgduv" sortColumn="time" xmlUrl="http://www.eurogamer.pl/?format=rss&amp;platform=ps3" htmlUrl="http://www.eurogamer.pl/" updateInterval="-1" collapsed="true"/>
+        <outline title="PS Site Polska - Recenzje" text="PS Site Polska - Recenzje" description="PS Site Polska - Recenzje" type="rss" id="wwetkbp" sortColumn="time" xmlUrl="http://www.pssite.com/rss-recenzje.html" htmlUrl="http://www.pssite.com/recenzje.html" updateInterval="-1" collapsed="true"/>
+        <outline title="PS Site Polska - Aktualno&#x15B;ci" text="PS Site Polska - Aktualno&#x15B;ci" description="PS Site Polska - Aktualno&#x15B;ci" type="rss" id="vqivfha" sortColumn="time" xmlUrl="http://www.pssite.com/rss.html" htmlUrl="http://www.pssite.com/news.html" updateInterval="-1" collapsed="true"/>
+      </outline>
+      <outline title="News" text="News" description="News" type="folder" id="cxpsnej" sortColumn="time" expanded="true">
+        <outline title="TVN24.pl - wiadomo&#x15B;ci z kraju" text="TVN24.pl - wiadomo&#x15B;ci z kraju" description="TVN24.pl - wiadomo&#x15B;ci z kraju" type="rss" id="rrkqjpt" sortColumn="time" xmlUrl="http://www.tvn24.pl/12690,rss_wiadomosci.rss" htmlUrl="http://www.tvn24.pl/wiadomosci-z-kraju,3.xml" updateInterval="-1" collapsed="true"/>
+        <outline title="WawaLove - z sercem o Warszawie" text="WawaLove - z sercem o Warszawie" description="WawaLove - z sercem o Warszawie" type="rss" id="lwrnmxw" sortColumn="time" xmlUrl="http://wawalove.pl/RSS" htmlUrl="http://wawalove.pl/" updateInterval="-1" collapsed="true"/>
+        <outline title="Gazeta.pl - Wiadomo&#x15B;ci" text="Gazeta.pl - Wiadomo&#x15B;ci" description="Gazeta.pl - Wiadomo&#x15B;ci" type="rss" id="lmuxxkb" sortColumn="time" xmlUrl="http://rss.gazeta.pl/pub/rss/kraj.xml" htmlUrl="http://www.gazeta.pl/wiadomosci" updateInterval="-1" collapsed="true"/>
+        <outline title="Wiadomo&#x15B;ci - Wirtualna Polska" text="Wiadomo&#x15B;ci - Wirtualna Polska" description="Wiadomo&#x15B;ci - Wirtualna Polska" type="rss" id="owjajwo" sortColumn="time" xmlUrl="http://wiadomosci.wp.pl/rss.xml" htmlUrl="http://wiadomosci.wp.pl" updateInterval="-1" collapsed="true"/>
+        <outline title="TVN Warszawa" text="TVN Warszawa" description="TVN Warszawa" type="rss" id="raneqfo" sortColumn="time" xmlUrl="http://www.tvnwarszawa.pl/rss.html" htmlUrl="http://tvnwarszawa.tvn24.pl" updateInterval="-1" collapsed="true"/>
+        <outline title="Wykop.pl" text="Wykop.pl" description="Wykop.pl" type="rss" id="gghdmfp" sortColumn="time" xmlUrl="http://www.wykop.pl/rss/index.xml" htmlUrl="http://www.wykop.pl" updateInterval="-1" collapsed="true"/>
+        <outline title="Polityka.pl - Warto przeczyta&#x107;" text="Polityka.pl - Warto przeczyta&#x107;" description="Polityka.pl - Warto przeczyta&#x107;" type="rss" id="ierbmar" sortColumn="time" xmlUrl="http://www.polityka.pl/rss/articles.xml?list=519" htmlUrl="http://www.polityka.pl" updateInterval="-1" collapsed="true"/>
+        <outline title="Slashdot" text="Slashdot" description="Slashdot" type="rss" id="ufrbaoa" sortColumn="time" xmlUrl="http://rss.slashdot.org/Slashdot/slashdot" htmlUrl="http://slashdot.org/" updateInterval="-1" collapsed="true"/>
+        <outline title="Onet Wiadomo&#x15B;ci" text="Onet Wiadomo&#x15B;ci" description="Onet Wiadomo&#x15B;ci" type="atom" id="xykuqma" sortColumn="time" xmlUrl="http://wiadomosci.onet.pl/11,kategoria.rss" htmlUrl="http://wiadomosci.onet.pl/" updateInterval="-1" collapsed="true"/>
+        <outline title="Wyborcza.pl" text="Wyborcza.pl" description="Wyborcza.pl" type="rss" id="ffnetlg" sortColumn="time" xmlUrl="http://serwisy.gazeta.pl/pub/rss/najnowsze_wyborcza.xml" htmlUrl="http://rss.gazeta.pl/pub/rss/najnowsze_wyborcza.xml" updateInterval="-1" collapsed="true"/>
+        <outline title="tokfm.pl/Najwa&#x17C;niejsze informacje" text="tokfm.pl/Najwa&#x17C;niejsze informacje" description="tokfm.pl/Najwa&#x17C;niejsze informacje" type="rss" id="ymfmlqi" sortColumn="time" xmlUrl="http://www.tokfm.pl/pub/rss/tokfmpl_glowne.xml" htmlUrl="http://tokfm.pl/" updateInterval="-1" collapsed="true"/>
+        <outline title="Wiadomo&#x15B;ci - Rzeczpospolita" text="Wiadomo&#x15B;ci - Rzeczpospolita" description="Wiadomo&#x15B;ci - Rzeczpospolita" type="rss" id="rrddnpm" sortColumn="time" xmlUrl="http://www.rzeczpospolita.pl/rss/news.rss" htmlUrl="http://www.rp.pl" updateInterval="-1" collapsed="true"/>
+      </outline>
+      <outline title="Blogs" text="Blogs" description="Blogs" type="folder" id="usmwfhp" sortColumn="time" expanded="true">
+        <outline title="Jak &#x17B;y&#x107; | Jak &#x17B;y&#x107;" text="Jak &#x17B;y&#x107; | Jak &#x17B;y&#x107;" description="Jak &#x17B;y&#x107; | Jak &#x17B;y&#x107;" type="rss" id="numhxtq" sortColumn="time" xmlUrl="http://jakzyc.wordpress.com/feed/" htmlUrl="http://jakzyc.eu" updateInterval="-1" collapsed="true"/>
+        <outline title="Make Life Harder" text="Make Life Harder" description="Make Life Harder" type="atom" id="bquroiq" sortColumn="time" xmlUrl="http://makelifeharder.blogspot.com/feeds/posts/default" htmlUrl="http://makelifeharder.blogspot.com/" updateInterval="-1" collapsed="true"/>
+        <outline title="Xfce Blog" text="Xfce Blog" description="Xfce Blog" type="rss" id="pqoedgc" sortColumn="time" xmlUrl="http://blog.xfce.org/feed/" htmlUrl="http://blog.xfce.org" updateInterval="-1" collapsed="true"/>
+        <outline title="dirty-fabulous-life" text="dirty-fabulous-life" description="dirty-fabulous-life" type="rss" id="dowuodk" sortColumn="time" xmlUrl="http://dirty-fabulous-life.blog.pl/feed/" htmlUrl="http://dirty-fabulous-life.blog.pl" updateInterval="-1" collapsed="true"/>
+        <outline title="NaTemat.pl" text="NaTemat.pl" description="NaTemat.pl" type="rss" id="qsjpryj" sortColumn="time" xmlUrl="http://natemat.pl/rss/wszystkie" htmlUrl="http://natemat.pl/" updateInterval="-1" collapsed="true"/>
+      </outline>
+      <outline title="Tech" text="Tech" description="Tech" type="folder" id="mgyensd" sortColumn="time" expanded="true">
+        <outline title="Ars Technica" text="Ars Technica" description="Ars Technica" type="rss" id="bxdfnuy" sortColumn="time" xmlUrl="http://feeds.arstechnica.com/arstechnica/index/" htmlUrl="http://arstechnica.com" updateInterval="-1" collapsed="true"/>
+      </outline>
+      <outline title="Fun" text="Fun" description="Fun" type="folder" id="hojmmxk" sortColumn="time" expanded="true">
+        <outline title="Joe Monster" text="Joe Monster" description="Joe Monster" type="rss" id="twrfgjw" sortColumn="time" xmlUrl="http://www.joemonster.org/backend.php" htmlUrl="http://joemonster.org" updateInterval="-1" collapsed="true"/>
+        <outline title="Hatak" text="Hatak" description="Hatak" type="atom" id="frxjjhp" sortColumn="time" xmlUrl="http://hatak.pl/rss/" htmlUrl="http://hatak.pl/" updateInterval="-1" collapsed="true"/>
+      </outline>
+    </outline>
+    <outline title="Oznaczone" text="Oznaczone" description="Oznaczone" type="vfolder" id="wdxumaf" sortColumn="time" matchType="any" collapsed="true">
+      <outline type="rule" text="Stan wyr&#xF3;&#x17C;nienia" rule="flagged" value="" additive="true"/>
+    </outline>
+  </body>
+</opml>

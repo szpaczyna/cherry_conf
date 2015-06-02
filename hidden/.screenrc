@@ -1,0 +1,7 @@
+# define a bigger scrollback, default is 100 lines
+defscrollback 1024
+utf8 on on
+defutf8 on
+hardstatus on
+hardstatus alwayslastline
+hardstatus string '%{= Kc}[ %{W}%H %{c}][%= %{= Kw}%?%-Lw%?%{c}[ %{W}%n*%f%t%?[%u]%?%{c} ]%{w}%?%+Lw%?%?%= %{c}][%{W} %d/%m/%y %{W} %c %{c}]'
