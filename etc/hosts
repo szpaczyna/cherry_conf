@@ -1,17 +1,6 @@
 ## localnet ##
 127.0.0.1	localhost
 
-10.0.0.1	gw
-10.0.0.2	cherry		cherry.morphine
-10.0.0.3	pinky		pinky.morphine
-10.0.0.4    daisy		daisy.morphine
-10.0.0.5	lemon		lemon.morphine
-10.0.0.6	morphine	morphine.morphine
-10.0.0.9	snowgoon	snowgoon.morphine
-10.0.0.10	weasel 		weasel.morphine
-10.0.0.12	squirrel 	squirrel.morphine
-10.0.0.14	svenson 	svenson.morphine
-
 ## ads blocker ##
 127.0.0.1  000dom.revenuedirect.com
 127.0.0.1  000-search.net
