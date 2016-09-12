@@ -1,0 +1,47 @@
+conky.config = {
+        xinerama_head = 2,
+        use_xft = true,
+        xftalpha = 0.1,
+        update_interval = 1,
+        total_run_times = 0,
+        own_window = true,
+        own_window_type = 'override',
+        own_window_transparent = true,
+        own_window_hints =  'undecorated,below,sticky,skip_taskbar,skip_pager',
+        background = false,
+        cpu_avg_samples = 2,
+        net_avg_samples = 2,
+        temperature_unit = 'celsius',
+        double_buffer = true,
+        no_buffers = true,
+        text_buffer_size = 2048,
+        border_inner_margin = 0,
+        border_outer_margin = 0,
+        draw_shades = false,
+        draw_outline = false,
+        draw_borders = false,
+        draw_graph_borders = false,
+        override_utf8_locale = true,
+        uppercase = false,
+        default_color = 'ffffff',
+        --default_shade_color = 112422,
+        color1 = 'DDDDDD',
+        color2 = 'AAAAAA',
+        color3 = '888888',
+        color4 = 'EF5A29',
+        mpd_host = 'localhost',
+        mpd_port = 6600,
+        --window specific
+        use_spacer = 'left',
+        maximum_width = 500,
+        gap_x = 30,
+        gap_y = 35,
+        alignment = 'bottom_right'
+}
+conky.text = [[
+${if_existing /proc/net/route wlan0}${font Caviar Dreams:size=13}Wifi Down:${color #FCD97B}${downspeed wlan0}${color} Up: ${color #FCD97B}${upspeed wlan0}${color}
+#Signal: ${color #FCD97B}${wireless_link_qual_perc wlan0}%${color}
+${endif}
+${font Caviar Dreams:size=13}Eth Down: ${color #FCD97B}${downspeed eth0}${color} Up: ${color #FCD97B}${upspeed eth0}${color}
+IPv6 Down: ${color #FCD97B}${downspeed he6}${color} Up: ${color #FCD97B}${upspeed he6}
+]]

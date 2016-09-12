@@ -1,0 +1,58 @@
+conky.config = {
+        xinerama_head = 2,
+        use_xft = true,
+        xftalpha = 0.1,
+        update_interval = 1,
+        total_run_times = 0,
+        own_window = true,
+        own_window_type = 'override',
+        own_window_transparent = true,
+        own_window_hints =  'undecorated,below,sticky,skip_taskbar,skip_pager',
+        background = false,
+        cpu_avg_samples = 2,
+        net_avg_samples = 2,
+        temperature_unit = 'celsius',
+        double_buffer = true,
+        no_buffers = true,
+        text_buffer_size = 2048,
+        border_inner_margin = 0,
+        border_outer_margin = 0,
+        draw_shades = false,
+        draw_outline = false,
+        draw_borders = false,
+        draw_graph_borders = false,
+        override_utf8_locale = true,
+        uppercase = false,
+        default_color = 'ffffff',
+        --default_shade_color = 112422,
+        color1 = 'DDDDDD',
+        color2 = 'AAAAAA',
+        color3 = '888888',
+        color4 = 'EF5A29',
+        mpd_host = 'localhost',
+        mpd_port = 6600,
+        --window specific
+        use_spacer = 'right',
+        maximum_width = 500,
+        gap_x = 10,
+        gap_y = 10,
+        alignment = 'top_left'
+}
+
+conky.text = [[
+${goto 10}${font Raleway:weight=Light :size=80}${time %H:%M}${font}
+
+
+${goto 30}${font Raleway:weight=Light :size=15}${time %d}${voffset -0,5}${color #a7a7a7} ${time  %B} ${time %Y}${voffset 20}${offset -80}${time %A}${color}
+
+${goto 14}${font Caviar Dreams:size=10}Uptime: ${uptime_short}
+${goto 14}Load: ${loadavg}
+
+${goto 14}Cpu1: ${color #FCD97B}${cpu cpu1}${color}%${goto 100}Cpu2: ${color #FCD97B}${cpu cpu2}${color}%
+${goto 14}Cpu3: ${color #FCD97B}${cpu cpu3}${color}%${goto 100}Cpu4: ${color #FCD97B}${cpu cpu4}${color}%
+${goto 14}Ram: ${color #FCD97B}${memperc}${color}%${goto 100}Swap: ${color #FCD97B}${swapperc}${color}%
+
+${goto 14}Cpu Temp: ${color #FCD97B}${execi 60 sensors | awk '/CPU T/ {print $3}' |sed -e 's/+//g' -e 's/\.[0-9]//g'}${color}
+${goto 14}Gpu Temp: ${color #FCD97B}${execi 60 nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader}°C${color}
+
+]]

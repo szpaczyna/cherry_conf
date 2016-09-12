@@ -1,0 +1,51 @@
+conky.config = {
+        xinerama_head = 2,
+        use_xft = true,
+        xftalpha = 0.1,
+        update_interval = 1,
+        total_run_times = 0,
+        own_window = true,
+        own_window_type = 'override',
+        own_window_transparent = true,
+        own_window_hints =  'undecorated,below,sticky,skip_taskbar,skip_pager',
+        background = false,
+        cpu_avg_samples = 2,
+        net_avg_samples = 2,
+        temperature_unit = 'celsius',
+        double_buffer = true,
+        no_buffers = true,
+        text_buffer_size = 2048,
+        border_inner_margin = 0,
+        border_outer_margin = 0,
+        draw_shades = false,
+        draw_outline = false,
+        draw_borders = false,
+        draw_graph_borders = false,
+        override_utf8_locale = true,
+        uppercase = false,
+        default_color = 'ffffff',
+        --default_shade_color = 112422,
+        color1 = 'DDDDDD',
+        color2 = 'AAAAAA',
+        color3 = '888888',
+        color4 = 'EF5A29',
+        mpd_host = 'localhost',
+        mpd_port = 6600,
+        --window specific
+        minimum_size = 1550,
+        gap_x = 40,
+        gap_y = 25,
+        maximum_width = 950,
+        alignment = 'top_right'
+}
+
+conky.text = [[
+${goto 10}${font Raleway:weight=Light :size=90}${execi 600 ~/scripts/weather.sh temp}${color}°C${font}
+
+
+${goto 35}${font Raleway:weight=Light :size=15}Pressure: ${execi 600 ~/scripts/weather.sh pres}
+
+${goto 14}${font Caviar Dreams:size=11}Gentoo: ${color #FCD97B}${fs_used_perc}${color}%${goto 125}Portage: ${color #FCD97B}${fs_used_perc /usr/portage}${color}%
+${goto 14}${font Caviar Dreams:size=11}Videos: ${color #FCD97B}${fs_used_perc /media/video}${color}%${goto 140}Music: ${color #FCD97B}${fs_used_perc /media/music}${color}%
+${goto 14}${font Caviar Dreams:size=11}Downloads: ${color #FCD97B}${fs_used_perc /media/downloads}${color}%${goto 140}Home: ${color #FCD97B}${fs_used_perc /home}${color}%
+]]
